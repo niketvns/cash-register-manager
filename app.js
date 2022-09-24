@@ -6,6 +6,7 @@ var ten = document.querySelector(".desktop .ten");
 var five = document.querySelector(".desktop .five");
 var two = document.querySelector(".desktop .two");
 var one = document.querySelector(".desktop .one");
+var returnAmount = document.querySelector("#return-change");
 
 var button = document.querySelector("button");
 
@@ -48,6 +49,7 @@ function getValues() {
     var bill_amout = document.querySelector(".input1").value;
     var cash_given = document.querySelector(".input2").value;
     var return_amount = cash_given - bill_amout;
+    returnAmount.innerHTML = ": " + return_amount + " Rs.";
     returnCash(return_amount);
 }
 

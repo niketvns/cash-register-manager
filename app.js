@@ -1,11 +1,11 @@
-var tt = document.querySelector(".tt");
-var fh = document.querySelector(".fh");
-var oh = document.querySelector(".oh");
-var tw = document.querySelector(".tw");
-var ten = document.querySelector(".ten");
-var five = document.querySelector(".five");
-var two = document.querySelector(".two");
-var one = document.querySelector(".one");
+var tt = document.querySelector(".desktop .tt");
+var fh = document.querySelector(".desktop .fh");
+var oh = document.querySelector(".desktop .oh");
+var tw = document.querySelector(".desktop .tw");
+var ten = document.querySelector(".desktop .ten");
+var five = document.querySelector(".desktop .five");
+var two = document.querySelector(".desktop .two");
+var one = document.querySelector(".desktop .one");
 
 var button = document.querySelector("button");
 

@@ -96,17 +96,13 @@ td {
 }
 
 footer {
-    height: 10vh;
+    height: 15vh;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 1rem;
-}
-
-.mobile {
-    display: none;
 }
 
 @media screen and (max-width: 500px) {
@@ -116,16 +112,23 @@ footer {
 
     input {
         width: 70%;
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    button:hover {
+        transform: scale(1);
+        background-color: brown;
+        color: white;
     }
 }
 
 @media screen and (max-width:390px) {
-    .desktop {
-        display: none;
+    body {
+        min-width: 370px;
     }
 
-    .mobile {
-        display: contents;
+    input {
+        width: 80%;
+        font-size: 1.5rem;
     }
 }

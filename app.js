@@ -6,17 +6,21 @@ var ten = document.querySelector(".desktop .ten");
 var five = document.querySelector(".desktop .five");
 var two = document.querySelector(".desktop .two");
 var one = document.querySelector(".desktop .one");
-var returnAmount = document.querySelector("#return-change");
+var returnAmount = document.querySelector(".return-change-div");
 
 var button = document.querySelector("button");
 
 function returnCash(return_amount) {
+
     if (return_amount < 0) {
-        alert("Take Rs. " + (-return_amount) + " more from customer");
+        returnAmount.innerHTML = "Take Rs. " + (-return_amount) + " more from customer";
+        returnAmount.style.color = "#f97316"
     } else {
         if (return_amount == 0) {
             alert("Nothing to return");
         }
+        returnAmount.innerHTML = "Return Amount: " + return_amount + " Rs.";
+        returnAmount.style.color = "green";
         var tt_note = ~~(return_amount / 2000);
         tt.innerHTML = tt_note;
         return_amount = return_amount % 2000;
@@ -49,8 +53,13 @@ function getValues() {
     var bill_amout = document.querySelector(".input1").value;
     var cash_given = document.querySelector(".input2").value;
     var return_amount = cash_given - bill_amout;
-    returnAmount.innerHTML = ": " + return_amount + " Rs.";
-    returnCash(return_amount);
+
+    if (bill_amout < 0 || cash_given < 0 || bill_amout.length == 0 || cash_given.length == 0) {
+        returnAmount.innerHTML = "Invalid Entry";
+        returnAmount.style.color = "red"
+    } else {
+        returnCash(return_amount);
+    }
 }
 
 button.addEventListener("click", getValues);
